@@ -61,7 +61,7 @@ const Home = () => {
 				<h1 className="text-gray-800 font-bold text-4xl mb-3">
 					Personal Info
 				</h1>
-				<p className="text-gray-400 mb-10">
+				<p className="text-gray-400 mb-10 text-lg">
 					Please provide your name, email address, and phone number.
 				</p>
 				<form action="" onSubmit={addUser}>
