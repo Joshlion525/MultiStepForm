@@ -174,7 +174,7 @@ const SelectPlan = () => {
 								onClick={toggle}
 								className={`w-12 h-6 flex items-center bg-gray-300 rounded-full p-1 cursor-pointer mx-5 ${
 									subscriptionType === "yearly"
-										? "bg-blue-900"
+										? "bg-gray-900"
 										: "bg-gray-900"
 								}`}
 							>

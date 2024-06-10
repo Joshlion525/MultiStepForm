@@ -12,6 +12,7 @@ export const SubscriptionProvider = ({ children }) => {
 		plan: "",
 		amount: 0,
 	});
+	const [selectedAddOn, setSelectedAddOn] = useState({});
 
 	return (
 		<SubscriptionContext.Provider
@@ -20,6 +21,8 @@ export const SubscriptionProvider = ({ children }) => {
 				setSubscriptionType,
 				selectedPlan,
 				setSelectedPlan,
+				selectedAddOn,
+				setSelectedAddOn,
 			}}
 		>
 			{children}
