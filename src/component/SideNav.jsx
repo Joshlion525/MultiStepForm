@@ -67,7 +67,7 @@ const SideNav = () => {
 			</div>
 			<div
 				className="flex gap-5 items-center py-3 mx-4 lg:mx-0"
-				onClick={() => handleStepClick(4)}
+				onClick={() => handleStepClick(4, "/summary")}
 			>
 				<div
 					className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold ${

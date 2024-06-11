@@ -9,9 +9,9 @@ const AddOns = () => {
 	const { subscriptionType, setSelectedAddOn } = useSubscription();
 
 	const [addons, setAddons] = useState({
-		onlineServices: { selected: false, amount: 1 },
-		largeStorage: { selected: false, amount: 2 },
-		customizableProfile: { selected: false, amount: 2 },
+		onlineServices: { name:"Online services", selected: false, amount: 1 },
+		largeStorage: { name: "Large storage", selected: false, amount: 2 },
+		customizableProfile: { name: "Customizable profile", selected: false, amount: 2 },
 	});
 	const [error, setError] = useState("");
 

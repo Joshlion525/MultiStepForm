@@ -8,6 +8,7 @@ import SelectPlan from "./pages/SelectPlan.jsx";
 import { SubscriptionProvider } from "./context/SubscriptionContext.jsx";
 import AddOns from "./pages/AddOns.jsx";
 import Summary from "./pages/Summary.jsx";
+import ThankYou from "./pages/ThankYou.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -24,8 +25,12 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/summary",
-		element: <Summary />
-	}
+		element: <Summary />,
+	},
+	{
+		path: "/thankyou",
+		element: <ThankYou />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

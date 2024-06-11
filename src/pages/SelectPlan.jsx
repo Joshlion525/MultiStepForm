@@ -79,9 +79,9 @@ const SelectPlan = () => {
 						</p>
 					</div>
 					<form action="" onSubmit={handleSubmit}>
-						<div className="flex gap-5">
+						<div className="flex flex-col md:flex-row gap-5">
 							<div
-								className={`border p-4 h-fit w-full flex flex-col justify-between gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
 									selectedPlan.plan === "arcade"
 										? "border-blue-400 bg-blue-50"
 										: "border"
@@ -108,7 +108,7 @@ const SelectPlan = () => {
 								</div>
 							</div>
 							<div
-								className={`border p-4 h-fit w-full flex flex-col justify-between gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
 									selectedPlan.plan === "advanced"
 										? "border-blue-400 bg-blue-50"
 										: "border"
@@ -135,7 +135,7 @@ const SelectPlan = () => {
 								</div>
 							</div>
 							<div
-								className={`border p-4 h-fit w-full flex flex-col justify-between gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
 									selectedPlan.plan === "pro"
 										? "border-blue-400 bg-blue-50"
 										: "border"
