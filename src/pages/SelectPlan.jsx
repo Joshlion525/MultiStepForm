@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideNav from "../component/SideNav";
+import background from "../assets/bg-sidebar-desktop.svg";
 import Arcade from "../assets/icon-arcade.svg";
 import Advanced from "../assets/icon-advanced.svg";
 import Pro from "../assets/icon-pro.svg";
@@ -13,8 +13,9 @@ const SelectPlan = () => {
 		setSubscriptionType,
 		selectedPlan,
 		setSelectedPlan,
+		error,
+		setError,
 	} = useSubscription();
-	const [error, setError] = useState("");
 
 	const handleRadioChange = (plan) => {
 		let amount;
@@ -68,7 +69,63 @@ const SelectPlan = () => {
 	return (
 		<div className="bg-blue-50 min-h-screen font-Ubuntu lg:py-28 xl:py-36">
 			<div className="max-w-[960px] md:h-[700px] mx-auto md:p-4 border rounded-lg bg-white shadow-lg flex flex-col lg:gap-20 lg:flex-row">
-				<SideNav />
+				<div
+					className="bg-cover bg-bottom lg:bg-center bg-no-repeat p-7 h-44 lg:h-full lg:rounded-lg lg:w-[300px] flex flex-row justify-center lg:justify-start lg:flex-col"
+					style={{ backgroundImage: `url(${background})` }}
+				>
+					<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
+						<div
+							className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold text-white`}
+						>
+							1
+						</div>
+						<div className="hidden lg:block">
+							<p className="text-sm font-thin text-gray-400">
+								STEP 1
+							</p>
+							<p className="font-bold text-white">YOUR INFO</p>
+						</div>
+					</div>
+					<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
+						<div
+							className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold bg-blue-50`}
+						>
+							2
+						</div>
+						<div className="hidden lg:block">
+							<p className="text-sm font-thin text-gray-400">
+								STEP 2
+							</p>
+							<p className="font-bold text-white">SELECT PLAN</p>
+						</div>
+					</div>
+					<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
+						<div
+							className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold text-white`}
+						>
+							3
+						</div>
+						<div className="hidden lg:block">
+							<p className="text-sm font-thin text-gray-400">
+								STEP 3
+							</p>
+							<p className="font-bold text-white">ADD-ONS</p>
+						</div>
+					</div>
+					<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
+						<div
+							className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold text-white`}
+						>
+							4
+						</div>
+						<div className="hidden lg:block">
+							<p className="text-sm font-thin text-gray-400">
+								STEP 4
+							</p>
+							<p className="font-bold text-white">SUMMARY</p>
+						</div>
+					</div>
+				</div>
 				<div className="flex-1 px-6 py-5 lg:pr-10 lg:py-10">
 					<div>
 						<h1 className="text-gray-800 font-bold text-4xl mb-3">
@@ -81,7 +138,7 @@ const SelectPlan = () => {
 					<form action="" onSubmit={handleSubmit}>
 						<div className="flex flex-col md:flex-row gap-5">
 							<div
-								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer hover:border-blue-400 ${
 									selectedPlan.plan === "arcade"
 										? "border-blue-400 bg-blue-50"
 										: "border"
@@ -108,7 +165,7 @@ const SelectPlan = () => {
 								</div>
 							</div>
 							<div
-								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer hover:border-blue-400 ${
 									selectedPlan.plan === "advanced"
 										? "border-blue-400 bg-blue-50"
 										: "border"
@@ -135,7 +192,7 @@ const SelectPlan = () => {
 								</div>
 							</div>
 							<div
-								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer ${
+								className={`border p-4 h-fit w-full flex md:flex-col md:justify-between gap-5 md:gap-16 rounded-md cursor-pointer hover:border-blue-400 ${
 									selectedPlan.plan === "pro"
 										? "border-blue-400 bg-blue-50"
 										: "border"
