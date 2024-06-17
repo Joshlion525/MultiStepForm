@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../assets/bg-sidebar-desktop.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSubscription } from "../context/SubscriptionContext";
@@ -54,9 +53,9 @@ const AddOns = () => {
 	return (
 		<div className="bg-blue-50 min-h-screen font-Ubuntu lg:py-28 xl:py-36">
 			<div className="max-w-[960px] md:h-[700px] mx-auto md:p-4 border rounded-lg bg-white shadow-lg flex flex-col lg:gap-20 lg:flex-row">
-				<div
-					className="bg-cover bg-bottom lg:bg-center bg-no-repeat p-7 h-44 lg:h-full lg:rounded-lg lg:w-[300px] flex flex-row justify-center lg:justify-start lg:flex-col"
-					style={{ backgroundImage: `url(${background})` }}
+				<main
+					className="bg-cover bg-center md:bg-bottom lg:bg-center bg-no-repeat p-7 h-44 lg:h-full lg:rounded-lg lg:w-[300px] flex flex-row justify-center lg:justify-start lg:flex-col"
+					
 				>
 					<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
 						<div
@@ -110,7 +109,7 @@ const AddOns = () => {
 							<p className="font-bold text-white">SUMMARY</p>
 						</div>
 					</div>
-				</div>
+				</main>
 				<div className="flex-1 px-6 py-5 lg:pr-10 lg:py-10">
 					<div>
 						<h1 className="text-gray-800 font-bold text-4xl mb-3">

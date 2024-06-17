@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import background from "../assets/bg-sidebar-desktop.svg";
 import { useNavigate } from "react-router-dom";
 import { useSubscription } from "../context/SubscriptionContext";
-
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -53,10 +51,7 @@ const Home = () => {
 
 	return (
 		<div className="max-w-[960px] md:h-[700px] mx-auto md:p-4 border rounded-lg bg-white shadow-lg flex flex-col lg:gap-24 lg:flex-row">
-			<div
-				className="bg-cover bg-bottom lg:bg-center bg-no-repeat p-7 h-44 lg:h-full lg:rounded-lg lg:w-[300px] flex flex-row justify-center lg:justify-start lg:flex-col"
-				style={{ backgroundImage: `url(${background})` }}
-			>
+			<main className="bg-cover bg-center md:bg-bottom lg:bg-center bg-no-repeat p-7 h-44 lg:h-full lg:rounded-lg lg:w-[300px] flex flex-row justify-center lg:justify-start lg:flex-col">
 				<div className="flex gap-5 items-center py-3 mx-4 lg:mx-0">
 					<div
 						className={`border rounded-full h-10 w-10 text-center flex justify-center items-center font-bold bg-blue-50`}
@@ -109,7 +104,7 @@ const Home = () => {
 						<p className="font-bold text-white">SUMMARY</p>
 					</div>
 				</div>
-			</div>
+			</main>
 			<div className="px-6 py-5 lg:px-0 lg:py-10">
 				<h1 className="text-gray-800 font-bold text-4xl mb-3">
 					Personal Info
